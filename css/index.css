@@ -1,10 +1,15 @@
+html {
+	--background: #161415;
+	--foreground: #fff;
+}
+
 body {
-	background-color: #161415;
+	background-color: var(--background);
+  	color: var(--foreground);
 	font-weight: normal;
 	font-style: normal;
 	font-size: 1rem;
 	font-family: Helvetica;
-	color: white;
 	line-height: 30px;
 }
 
@@ -19,7 +24,7 @@ h2 {
 
 p	{
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 1.4rem;
+	font-size: 1em;
 } 
 
 ul {
@@ -28,19 +33,25 @@ ul {
 	padding: 0;
 	overflow: hidden;
 	background-color: #161415;
-  }
+}
   
-  li {
-	float: right;
-  }
+li {
+	float: center;
+}
   
-  li a {
+li a {
 	display: block;
 	color: white;
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
-  }
+}
+
+a {
+	text-decoration: none;
+}
+
+
 nav {
 	padding: 3%;
 }
@@ -50,27 +61,24 @@ section {
 	padding: 5%; 
 }
 
-#intro {
-	background-color: white;
+.dark {
+	background-color: var(--background);
+	color: var(--foreground)
 }
 
-#intro h1 {
-	color: #161415;
+.light {
+	background-color: var(--foreground);
+	color: var(--background)
 }
 
-#intro p {
-	color: #161415;
-}
-
-#waterfront img {
-	float: left;
-	margin-right: 30px;
-	margin-bottom: 17px;
+.waterfront img {
+	width: 100%;
+	float: none;
 }
 
 
 #class {
-	background-color: white;
+	display: block;
 }
 
 #class h1 {
@@ -82,14 +90,22 @@ section {
 }
 
 .column img {
-	height: 125px;
+	height: 90px;
 	float: left;
 	vertical-align: middle;
 }
 
 .column {
+	display: grid inline-block;
+	grid-template: 5fr 5fr;
 	padding: 0 4px;
 }
+
+
+.video {
+	align-content: center;
+}
+
 
 footer {
 	background-color: white;
@@ -102,4 +118,11 @@ footer h1 {
 
 footer p {
 	color: #161415;
+}
+
+
+/* MEDIA QUERIE*/
+
+@media screen and (min-width: px) {
+
 }
