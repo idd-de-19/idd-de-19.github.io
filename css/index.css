@@ -9,7 +9,7 @@ body {
 	font-weight: normal;
 	font-style: normal;
 	font-size: 1rem;
-	font-family: Helvetica;
+	font-family: arial;
 	line-height: 30px;
 }
 
@@ -20,6 +20,10 @@ h1 {
 
 h2 {
 	font-family: arial;
+}
+
+h3 {
+	font-size: 1.5rem;
 }
 
 p	{
@@ -56,19 +60,20 @@ nav {
 	padding: 3%;
 }
 
-
-section {
-	padding: 5%; 
-}
-
 .dark {
 	background-color: var(--background);
-	color: var(--foreground)
+	color: var(--foreground);
+	padding: 3%;
 }
 
 .light {
 	background-color: var(--foreground);
-	color: var(--background)
+	color: var(--background);
+	padding: 3%;
+}
+
+.idd img {
+	width: 100%;
 }
 
 .waterfront img {
@@ -76,53 +81,112 @@ section {
 	float: none;
 }
 
-
-#class {
-	display: block;
-}
-
-#class h1 {
-	color: #161415;
-}
-
-#class p {
-	color: #161415;
+.around {
+	display: grid;
+	text-align: center;
 }
 
 .column img {
 	height: 90px;
-	float: left;
 	vertical-align: middle;
 }
 
 .column {
-	display: grid inline-block;
-	grid-template: 5fr 5fr;
-	padding: 0 4px;
+	display: grid;
+	grid-template-columns: auto;
 }
 
+.program {
+	padding: 3%;
+	text-align: center;
+}
 
 .video {
+	overflow: hidden;
+	padding-top: 56%;
+	position: relative;
 	align-content: center;
 }
 
-
-footer {
-	background-color: white;
-	padding: 5%;
+.video iframe {
+	border: 0;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
 }
 
-footer h1 {
-	color: #161415
-}
-
-footer p {
-	color: #161415;
+.links {
+	text-align: center;
 }
 
 
 /* MEDIA QUERIE*/
 
-@media screen and (min-width: px) {
+@media screen and (min-width: 732px) {
+	.idd img {
+		width: 55%;
+		padding-left: 3%;
+		float: right;
+	}
+	
+	.waterfront img {
+		width: 55%;
+		padding-right: 3%;
+		float: left;
+	}
 
+	.column {
+		display: grid;
+		grid-template-columns: auto auto;
+	}
+
+	.links {
+		text-align: left;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	body {
+		font-size: 1.2rem;
+	}
+
+	li {
+		float: left;
+	}
+
+	.idd img {
+		width: 40%;
+		padding-left: 3%;
+		float: right;
+	}
+	
+	.waterfront img {
+		width: 46%;
+		padding-right: 3%;
+		float: left;
+	}
+
+	.waterfront {
+		display: inline-block;
+	}
+
+	.around {
+		float: left;
+	}
+
+	.video iframe {
+		border: 0;
+		height: 80%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 80%;
+	}
+
+	.column {
+		display: grid;
+		grid-template-columns: auto auto auto;
+	}
 }
