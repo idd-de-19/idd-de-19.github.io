@@ -121,6 +121,10 @@ nav {
 	text-align: center;
 }
 
+.links img {
+	padding-right: 3%;
+}
+
 
 /* MEDIA QUERIE*/
 
@@ -152,6 +156,10 @@ nav {
 		font-size: 1.2rem;
 	}
 
+	ul {
+		float: right;
+	}
+
 	li {
 		float: left;
 	}
@@ -177,11 +185,12 @@ nav {
 	}
 
 	.video iframe {
-		border: 0;
-		height: 80%;
-		left: 0;
 		position: absolute;
 		top: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		height: 80%;
 		width: 80%;
 	}
 
